@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>dropdown</title>
+        
+        <style type="text-css"> 
+            body {
+                font-family:'Courier New', Courier, monospace;
+                padding: 20px 50px 150px;
+                font-size:13px;
+                text-align:center;
+                background-color: #888;
+            }
+            ul{
+                /*this inline is important*/
+                display: inline-block;
+                margin:0;
+                padding:15px 4px 17px 0;
+                list-style-type: none;
+                box-shadow:0,0,5px #999;
+            }
+            ul li{
+                font: bold 12px/18px sans-serif;
+                display:inline-block;
+                position:relative;
+                padding: 15px 20px;
+                background: #fff;
+                cursor: pointer;
+                transition: all 0.2s;
+            }
+            ul li:hover {
+                background-color: #555;
+                color: #fff;
+
+            }
+            ul li ul{
+                padding: 0;
+                position: absolute;
+                top:48px;
+                left:0 ;
+                width:150px;
+                box-shadow: none;
+                display: none;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.9s;
+
+
+            }
+            ul li ul li{
+                background: #555;
+                display: block;
+                color:#fff;
+                text-shadow: 0-1px 0 #000;
+            }
+
+            ul li ul li:hover{
+                background:#666;
+
+            }
+
+            ul li:hover ul {
+                display: block;
+                opacity: 1;
+                visibility: visible;
+            }
+        </style>
+    </head>
+
+    <body>
+        <head>
+            <ul>
+                <li>Home</li>
+                <li>ABout</li>
+                <li>Portfolio
+                    <ul>
+                        <li>WebDevelo</li>
+                        <li>dsfg</li>
+                        <li>dfa</li>
+                    </ul>
+                </li>
+
+        
+
+            </ul>
+
+          
+
+        </head>
+    </body>
+</html>

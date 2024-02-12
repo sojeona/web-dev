@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1"/>
+        <title> Intro to CSS Text and Spam</title>
+        <style type="text/CSS">
+            /* universal selector to zero out default margins or padding*/
+            *{
+                margin:0;
+                padding:0;
+            }
+            /* tag selector applies to every instance of that tag on the page*/
+            p { 
+                /* 1 rem = 16px */
+                margin-top: 1rem;
+                margin-bottom:1rem;
+                margin-left: 0.5rem;
+                color: #FF2200;
+                font-family: Helvetica,Arial,sans-serif;
+                /*use helvetica if the browser have it, no? them arial, and then sans-serif which is brouse default font*/
+            }
+            .sily_text {
+                font-family: fantasy;
+                /*you can only choose from the font weight your font support, font weight is about the thickness i guess*/
+                font-weight: 800;
+
+
+            }
+            #really_important {
+                font-weight: 600;
+                font-style: oblique;
+                line-height:1.5;
+
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            
+            .indented {
+                text-indent: 20%
+            }
+            .align_right {
+                text-align: justify;
+
+            }
+
+
+        </style>
+    </head>
+</html>
+<body>
+    <h1 style="margin: 10px 20px; color:rgb(139, 60, 214)">Heading 1 Displays Block</h1>
+    <p>
+        <span class="sily_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span> Vestibulum quis
+        justo porta, ultricies sem suscipit, hendrerit metus. Nunc aliquam tellus
+        eu tincidunt zrhoncus. Mauris rhoncus risus nec venenatis ultrices.
+        Vestibulum blandit laoreet enim, a aliquam neque tempor sit amet. Duis
+        varius metus vitae felis maximus sagittis. Curabitur vehicula vestibulum
+        felis et posuere. Donec scelerisque volutpat luctus.
+      </p>
+      <p>
+        <span id="really_important">Vivamus laoreet, eros quis tincidunt aliquam, orci nisl egestas lacus, sit
+        </span>amet eleifend dolor leo ultricies enim. Nunc mauris neque, iaculis in
+        ullamcorper feugiat, rhoncus et mauris. Aenean sem sem, congue vel
+        fringilla sed, ultrices rutrum purus. Phasellus luctus quam ut placerat
+        sagittis. Mauris vitae faucibus quam, sit amet accumsan magna. Cras nec
+        tempus ligula. Pellentesque a semper arcu.
+      </p>
+      <p>
+        <span class="align_right">Maecenas a nulla et nisi tristique ultricies. Etiam ut justo lacus. Duis
+            eu mauris eu mi finibus efficitur sed vel elit. </span>Aenean vitae varius urna.
+        Nulla maximus tincidunt ipsum, a viverra nibh. Aliquam faucibus metus id
+        ante ullamcorper fermentum. Sed laoreet ipsum erat, ut scelerisque tortor
+        dignissim sed. Etiam maximus mi nulla, efficitur volutpat urna tincidunt
+        eu. Praesent ut ligula libero.
+      </p>
+    </body>
+  </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ed">
+    <head>
+        <title>Simple Navbar</title>
+        <!-- internal style sheet (only applies to this page/file)-->
+        <style type="text/CSS">
+            {
+                margin:0;
+                padding:0;
+            }
+            body {
+                font-family:'Times New Roman', Times, serif;
+            }
+            header{
+                background-color:blue
+            }
+            /* This covers uo the green header behind it*/
+            nav {
+                 background-color:aliceblue;
+            }
+            ul{
+                /*remoce all bulllet points*/
+                list-style-type:none;
+                overflow: hidden;
+                background-color: blue;
+                /*
+                make the parent elements font size zero when using inline block
+                to get rid of the tiny annoying space between letters */
+                font-size:0;
+
+            }
+            li {
+                /*list display BLOCK by default, they dont want to share horizontal space
+                we are making Li display inline-blck which gives us the benefits of 
+                */
+                font-size:1rem;
+                display: inline-block;
+                width: 200px
+                
+            }
+            li a{
+                /*descendant selector is looking for this pattern*/
+                display: block;
+                text-align: center;
+                width:20px;
+                padding:10px;
+                text-decoration:none;
+                color:orange;
+
+
+            }
+            li a.active{
+                background-color:antiquewhite;
+                color:aliceblue;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a herf="#">Link1</a></li>
+                    <li><a herf="#">Link2</a></li>
+                    <li><a herf="#">Link3</a></li>                
+                    <li><a herf="#">Link4</a></li>
+                
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>

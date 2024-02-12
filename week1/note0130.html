@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HTML Form Elements and Inputs</title>
+  </head>
+  <body>
+    <!-- this is command+/ -->
+    <p>
+      Here is a form containing basic input types. For more information see
+      <a herf="https://www.w3schools.com/html/html_forms.asp" target="_black">w3schools.</a>
+
+    </p>
+    <!-- The form action usually contains a file to process the form data, it could be local like contact.php
+    or it could be to a third party API. The action is what we want to do with the dorm data. -->
+    <form action="#" method="POST" name="sampleForm" target="_self">
+      <fieldset>
+        <legend>Simple Text Input</legend>
+        <p>
+          The box and title are created by using the fieldset and legend tags.
+        </p>
+        <label for="FirstName">First Name</label>
+        <!-- always for in label, always no space for attributes. THis is how we tag label and input together -->
+        <input type="text"/>
+        <p>This text pnput has a max character length and placeholder text.</p>
+        <label for="LastName">Last Namel</label>
+        <input 
+          name="LastName"
+          type="text"
+          placeholder="Last Name" 
+          maxlength="15"
+        />
+        <label for="age"> Your age:</label>
+        <input name="age" type="number" min="0" max="100"
+        />
+        <label for="password"> Your password:</label>
+        <input name="password" type="password" 
+        />
+      </fieldset>
+      <fieldset>
+        <legend>Text fgsg</legend>
+        <label for="whyIdm"> Why did you apply IDM?</label>
+        <textarea name="whyIdm" cols="50" rows="10"></textarea>
+      </fieldset>
+      <fieldset><legend>Checkboxes</legend>
+        <p>Check boxes allow the user to select more than oe options at once. 
+          Checkboxes in thesame group have the smae name, but the different values.
+        </p>
+        <label for="Pet">What pets to do you have?</label>
+        <br/>
+
+        <input type="checkbox" name="Pet" value="Dog" />Dog
+        <br/>
+        <input type="checkbox" name="Pet" value="Cat" />Cat
+        <br/>
+        <input type="checkbox" name="Pet" value="bunny" />whatever
+        <br/>
+        <input type="checkbox" name="Pet" value="snake" />snake
+      <!-- value is what will be submitted and the white letter is what will reveal in the webpage -->
+    </fieldset>
+    <fieldset>
+      <legend>Radio Buttons</legend>
+      <p>
+        Radio Buttons only allows ther user to select one option per group.
+        Radio Buttons in the same group have the same name, but different 
+      
+      </p>
+      <label for="Pet">Which pet is your favorite?</label>
+      <br/>
+      <input type="radio" name="Pet" value="Dog" />Dog
+      <br/>
+      <input type="radio" name="Pet" value="Cat" />Cat<br/>
+      <input type="radio" name="Pet" value="bunny" />whatever<br/>
+      <input type="radio" name="Pet" value="snake" />snake
+    </fieldset>
+    <fieldset>
+      <legend>Select Options</legend>
+      <p>
+        Using the select and option tags, you can add items to a dropdown menu.
+      </p>
+      <label for="State">Pick a State!</label>
+      <br/>
+      <select name="State">
+        <option value="NH">New Hampshire</option>
+        <option value="NY">New York</option>
+        <option value="NM">New Hampshire</option>
+        <option value="NH">New Hampshire</option>
+      </select>
+    </fieldset>
+    <p>Finally, we use a button to submit our form</p>
+    <input name="Submit" value="Submit" type="button" disabled />
+    <button role="botton">Contaxt us!</button>
+    </form>
+  </body>
+</html>
