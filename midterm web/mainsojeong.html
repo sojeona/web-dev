@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html　lang="en">
+    <head>
+        <title>now i'm sojing</title>
+        <meta http-equiv="content-type" charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="/Users/ksj1317/Desktop/web-dev/midterm web/style.css" />
+        <link rel="preconncet" href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&display=swap"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+
+        <style>
+            header h1{
+                font-family: "Lexend Exa", sans-serif;      
+                font-weight: 1000;
+                font-size: 11em;;
+                font-style: normal;
+                letter-spacing: -35px ;
+                position: absolute;
+                top: -170px;
+                right: -10px;
+            }
+            header h3{
+                font-family: "Noto Serif JP", sans-serif;
+                font-size: 2em;
+                font-weight: 400;
+                font-style: normal;
+                position:absolute;
+                top: 90px;
+                right: 100px;
+
+            }
+            .maincontainer {
+                background-color: rgb(0, 0, blue,0.3);
+                display: flex;
+                justify-content:center;
+                align-items: center;
+            }
+            .dot {
+                height: 300px;
+                width: 300px;
+                background-color:  #bbb;
+                border-radius: 50%;
+                display: flex;
+                margin-top: 15%;
+                left: 10%;
+                
+                position:relative;
+
+            }
+            .button {
+                position:relative;
+                margin: 10%;
+                font-size: none;
+                margin-left: 15px;
+                display:inline-block;
+                padding: -10px;
+                
+            }
+            .button ul {
+                list-style-type:none;
+                text-align: center;
+                justify-content: center;
+                transform: translate(0%,50%);
+               
+            }
+            .button ul li {
+                font-size: 4em;
+                font-weight: 600;
+                text-align: left;
+                
+
+            }
+            .button ul li a {
+                text-decoration: none;
+                color: white;
+                display: block;
+                transition: all 1s;
+                text-shadow: -1px 1px 0 #000,
+                1px 1px 0 #000,
+                1px -1px 0 #000,
+                -1px -1px 0 #000;
+                
+            }
+            .button ul li ul{
+                
+
+                position:absolute;
+                left: 90%;
+                top: -20px;
+                font-size: 0;
+                text-align: right;
+
+            }
+            .button ul li:hover > ul{
+                display: initial;
+                font-size: 10px;
+                
+
+            }
+            
+            .button-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                z-index: 1;
+
+            }
+
+
+
+
+
+            .dropout {
+                float: right;
+                overflow: hidden;
+            }
+            .dropout .dropbtn {
+
+                position:relative;
+                margin: 10%;
+                margin-left: 15px;
+                display:inline-block;
+                padding: -10px;
+                font-size: 4em;
+                font-weight: 600;
+                text-align: left;
+                
+
+            }
+            .dropout-content {
+                display: none;
+                position: absolute;
+                background-color: white;
+                min-width: 160px;
+                z-index: 1;
+            }
+            .dropout:hover .dropbtn,
+            .button a:hover {
+  /* these properties will animate because we defined a transition on the initial state */
+                color: rgba(40, 40, 40, 0.5);
+                
+            }
+
+
+            .dropout-content a {
+                color: blue;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+ 
+
+            
+
+
+
+        </style>
+
+
+    </head>
+    <body>
+        <header>
+            <h1>Sojeong</h1>
+            <h3><span lang="JP">忘備録</span></h3>
+            
+        </header>
+
+        <div class="maincontainer">
+        
+            <span class="dot"></span>
+            <div class="button">
+                <ul>
+                    <li><a href="#">Private</a>
+                        <ul>
+                            <li><a href="#">Diary</a></li>
+                            <li><a href="#">Gallery</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li>SEE</li>
+                    <li><a herf="#">Work</a></li>
+                </ul>
+                
+            </div>
+    
+            
+        </div>
+        
+        
+
+    </body>
+</html>
