@@ -1,0 +1,119 @@
+
+h1{
+    text-align: center;
+}
+.header h3{
+    top:-10px;
+    text-align: left;
+}
+
+ul{
+    list-style-type: none;
+    overflow: hidden;
+    font-size:0;
+    position: fixed;
+    margin-top: 0%;
+    margin-right: 0%;
+    top:0px;
+    right: 0%;
+
+}
+ul li{
+    display: inline-block;
+    font-size: 1rem;
+}
+/* descendant selector is looking for this pattern */
+li a {
+  display: block;
+  text-align: center;
+  width: 100px;
+  padding: 10px;
+  text-decoration: none;
+  color:black;
+  
+}
+li a.active {
+    color: rgb(96, 96, 96);
+}
+
+li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:rgb(203, 203, 203);
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    right: 0;
+
+}
+
+.dropdown-content a {
+
+padding: 12px 16px;
+display: block;
+text-decoration: none;
+color: black;
+
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropbtn {
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.dropbtn:hover {
+    color: #007bff;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.container {
+    width: 900px;
+    font-size: 0;
+    padding-top:10%;
+
+}
+
+.menuicon {
+    width:200px;
+    display: inline-block;
+    position:relative;
+}
+.menuicon img{
+    max-height: 200px; /* Adjust this value as needed to match the other images */
+    max-width: auto;
+    display: block; /* This ensures the image is a block-level element */
+    margin: 0 auto; /* This will center the image in its container */
+}
+.menuicon p{
+    position:absolute;
+    bottom:14px;
+    font-size: 1rem;
+    width: 200px;
+    text-align: center;
+    
+}

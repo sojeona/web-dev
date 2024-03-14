@@ -1,0 +1,52 @@
+/* Global Style*/
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family:'Courier New', Courier, monospace;
+
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/* Flexbox simple row layouts */
+
+.container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*some styler so we cann see all of our*/
+    border: 1px solid blue;
+    background-color: rgba(0,0,255,0.3); /*want opacity--> use rgba*/
+    min-height : 400px;
+
+}
+
+.item {
+    border: 1px solid orange;
+    background-color: rgba(200,0,100,0,5);
+    width: 23%;
+    min-height: 200px;
+}
+
+/*Atomic CSS Design Pattern*/
+.center{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.justify-start{
+    justify-content:flex-start;
+
+}
+.justify-end{
+    justify-content:between;
+}

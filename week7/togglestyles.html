@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewpoint"content="width=device-width,initial-scale=1"/>
+        <title>toggle style</title>
+        <style>
+            .active{
+                background-color: blue;
+                color:white;
+                font-size: 60px;
+            }
+        </style>
+        <script>
+            function toggleActive(){
+                var element = document.getElementById('changeMe')
+                //console.log(element)
+                //check if the element already has the class active applied
+                if (element.classList.contains("active")){
+                    element.classList.remove("active")
+                    element.innerHTML="I am not active anymore;;"
+                } else{
+                    element.classList.add("active")
+                }
+
+            }
+        </script>
+
+    </head>
+    <body>
+        <h1 id="changeMe" onClick="toggleActive()" >This is a heading 1 click me to change Css class and html content</h1>
+    </body>
+</html>

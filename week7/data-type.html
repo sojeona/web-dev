@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+        <title>javaS Data type</title>
+        <style type="text/css">
+
+        </style>
+        <script type="text/javascript">
+            /*declare a variable*/
+            var maVar;
+            //assigh a value to a variable
+            myVar="number";
+            // declare and assign in the same line
+            var otherVar=24;
+            console.log(myVar)
+            console.log(typeof myVar)
+            // reassign calue to myVar
+            console.log(4+16)
+            console.log(4+"16")
+            console.log(6*"four")
+
+            var temp = 72;
+            var message=("today\'s temperature is "+ temp +" degree F.")
+            console.log(message)
+            //declare and define a function
+            function printout(){
+                console.log("hello world")
+            }
+            printout()
+            function sumVals(a,b){
+                //wahtever is written between the {} is our function
+                //any variable declared/assigned between{} live and diw within this function
+                var sum=a+b
+                alert(sum)
+                // same as console.log
+            }
+            //caling sumVals dunction with 2 argument
+            sumVals(1,2)
+            var isOn=true
+            //booleans and conditonals
+            function switchOnOff() {
+                alert("isOn is currently true. switching to False")
+                var isOn=false
+            }
+            switchOnOff()
+            
+            //loops and increments
+            //i++ is shorthand for i=i+1
+            function countTon(n)
+
+            
+        </script>
+    </head>
+    <body>
+        <button onclick="sumVals(45,98)">Call sum Values function</button>
+    </body>
+</html>

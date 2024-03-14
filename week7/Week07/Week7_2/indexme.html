@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewpoint" content="width=device-width initial-scale=1"/>
+        <title>Dinamic Dom 2 ways</title>
+        <style type="text/css">
+            #content{
+                color:red;
+
+            }
+            @media screen and (max-width:767px){
+            #content {
+                color:blue;
+            }
+            
+                
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <button onclick="addSingeP()">Add a songle P using strings</button>
+        <button onclick="addMultiP()">Add multiple Ps the right way using DOM node</button>
+        <div id="content">
+            <p>This is some dummy text, that will be overwritten by innerHTML. </p>
+        </div>
+        <script type="text/javascript">
+            //declare our content cairable globally
+            var content
+            //this will work globally because the script tag is after the body content
+            content=document.getElementById("content")
+            //console.log(content)
+            function addSingleP(){
+                content.innerHTML="<p>This is a poorly instantiated p tag using string trickery!</p>"
+            }
+            //this is proper dynamic do, manipulation
+            function addMultP(num){
+                for (var i=0;i<num;i++){
+                    var p = dpcument.createElement("p")
+                    var text = document.createTextNode(
+                        "This is paragraph numner "+(i+1) +" created with nodes."
+                    )
+                }
+                p.appendChild(text)
+                //append the p to our content div
+            }
+        </script>
+    </body>
+</html>

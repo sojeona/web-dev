@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items:baseline;
+            border-bottom: 1px solid black;
+            padding-bottom: 0px;
+        }
+
+    .left-side {
+        position: relative;
+        left: -50px; /* Negative position towards left */
+    }
+    
+
+    .right-side {
+        position: relative;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color:rgb(203, 203, 203);
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        right: 0;
+    
+    }
+
+    .dropdown-content a {
+    
+    padding: 12px 16px;
+    display: block;
+    text-decoration: none;
+    color: black;
+
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropbtn {
+        font-weight: bold;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: 0.3s;
+        border:none;
+    }
+
+    .dropbtn:hover {
+        color: #007bff;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .image {
+        width: 200px;
+        height: 200px;
+        margin: 10px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        transition: opacity 0.3s;
+    }
+
+    .image:hover {
+        opacity: 0.8;
+        z-index: 1;
+    }
+
+.image[data-title]::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+    padding: 5px;
+    font-size: 14px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.image:hover::after {
+    opacity: 1;
+}
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        
+        <div class="left-side">
+            <h1>Soddjeong's</h1>
+            <div class="line"></div> <!-- Line added here -->
+        </div>
+        <div class="right-side">
+            <div class="dropdown">
+                <button class="dropbtn">private</button>
+                <div class="dropdown-content">
+                    <a href="#">Gallery</a>
+                    <a href="#">Blog</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn">work</button>
+                <div class="dropdown-content">
+                    <a href="#">portfolio</a>
+                </div>
+            
+            </div>
+        </div>
+    </nav>
+    <!DOCTYPE html>
+
+    <div class="container">
+        <div class="image" style="background-image: url('/Users/ksj1317/Desktop/web-dev/midterm web/imgfood]/bread.png');" data-title="Image 1"></div>
+        <div class="image" style="background-image: url('/Users/ksj1317/Desktop/web-dev/midterm web/imgfood]/dango.png');" data-title="Image 2"></div>
+        <div class="image" style="background-image: url('/Users/ksj1317/Desktop/web-dev/midterm web/imgfood]/ishida.png');" data-title="Image 3"></div>
+        <!-- Add more images as needed -->
+    </div>
+
+
+
+    
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Getting used to html</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <style type="text/css">
+            body{
+                font-family : "Passion One", sans-serif;
+                font-style:normal;
+                font-weight: bold;
+            }
+            
+ul{
+    display:inline;
+    margin:0;
+    list-style-type:none;
+    box-shadow:0,0,5px rgba(0,0,0,0.15);
+    position:center;
+
+}
+
+
+ul li {
+        font: bold 12px/18px sans-serif;
+        display: inline-block;
+        position: relative;
+        padding: 15px 20px;
+        background: #fff;
+        cursor: pointer;
+        transition: all 0.9s;
+      }
+
+      ul li:hover {
+        background-color: #555;
+        color: #fff;
+      }
+
+.container{
+    margin: auto;
+    position:relative;
+    text-align:center;
+    background-color:rgb(4, 4, 198);
+    color:white;
+    padding-top: 10px;
+
+}
+ul li ul {
+        padding: 0;
+        position: absolute;
+        top: 48px;
+        left: 0;
+        width: 150px;
+        box-shadow: none;
+        display: none;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.9s;
+      }
+
+      ul li ul li {
+        background: #555;
+        display: block;
+        color: #fff;
+        text-shadow: 0 -1px 0 #000;
+      }
+
+      ul li ul li:hover {
+        background: #666;
+      }
+
+      ul li:hover ul {
+        display: block;
+        opacity: 1;
+        visibility: visible;
+      }
+.glued{
+    display: inline-block;
+    position:relative;
+    margin:20px;
+    display:inline-block;
+    height: auto;
+}
+.bottomleft{
+    position:absolute;
+    left:30%;
+    bottom:30%;
+}
+.bottomleft p{
+    position:absolute;
+    font-size: 1rem;
+    right:140px;
+    bottom: 10%;
+}
+.icon{
+    position:absolute;
+    bottom:50%;
+    right:40%;
+}
+.icon p{
+    position:absolute;
+    bottom:50%;
+    right:40%;
+    transform: translate(-50%, -50%); 
+    color:rgb(6, 6, 61);
+    text-shadow: 0 -2px 1px white;
+
+}
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Hello</li>
+            <li>I</li>
+            <li>Want</li>
+            <li>A Nav</li>
+    </ul>
+        
+        <div class="container">
+            <p>This is a practice</p>
+        <div class="glued">      
+        <img src="/Users/ksj1317/Desktop/web-dev/week4/practice/img/me1.png" 
+            alt="it's me" width=30%>
+    
+        </div>
+        <div class="bottomleft">
+            <img src="img/headphone.png" alt="orange" width=20%>
+            <p>SONY</p>
+        </div>
+        <div class="icon"> 
+            <img src= "img/icon.png" alt="dish" width= 30%>
+            <p>$20</p>
+        
+        </div>
+        <div class="glued">This is an absolute positioned div. Note that it is the third div in our HTML!</div>
+    </div>
+
+
+    </body>
+</html>
