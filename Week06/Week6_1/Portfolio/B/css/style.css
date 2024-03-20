@@ -17,8 +17,12 @@ img {
   height: auto;
 }
 
+
+
 /* Desktop First Styling */
-/* Jumbotron */
+/* 
+            <br />
+            <input type="button" value="change" onClick="randImg()" /> */
 
 div.hero {
   width: 100vw;
