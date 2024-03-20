@@ -1,119 +1,196 @@
 
 h1{
     text-align: center;
+    margin-top: 100px;
+    position: relative;
 }
-.header h3{
-    top:-10px;
-    text-align: left;
-}
-
-ul{
-    list-style-type: none;
-    overflow: hidden;
-    font-size:0;
-    position: fixed;
-    margin-top: 0%;
-    margin-right: 0%;
-    top:0px;
-    right: 0%;
-
-}
-ul li{
-    display: inline-block;
-    font-size: 1rem;
-}
-/* descendant selector is looking for this pattern */
-li a {
-  display: block;
-  text-align: center;
-  width: 100px;
-  padding: 10px;
-  text-decoration: none;
-  color:black;
+/*nav----------------------*/
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    border-bottom: 1px solid black;
+    background-color: #ffffff;
+    z-index: 100;
+    background-color: white;
+    margin: 0;
+    
+  }
   
-}
-li a.active {
-    color: rgb(96, 96, 96);
-}
-
-li a:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #fff;
-}
-.dropdown {
+  .left-side {
+    position: relative;
+    left: -15px;
+    margin-top: auto;
+  }
+  .left-side img{
+    size: 30%;
+  }
+  
+  .left-side a{
+    text-decoration: none;
+    cursor:pointer;
+  }
+  
+  
+  
+  
+  .right-side {
+    right:3%;
+    position: relative;
+  }
+  
+  .dropdown {
     position: relative;
     display: inline-block;
-}
-
-.dropdown-content {
+  }
+  
+  .dropdown-content {
     display: none;
     position: absolute;
-    background-color:rgb(203, 203, 203);
     min-width: 100px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    right: 0;
-
-}
-
-.dropdown-content a {
-
-padding: 12px 16px;
-display: block;
-text-decoration: none;
-color: black;
-
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropbtn {
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.dropbtn:hover {
-    color: #007bff;
-}
-
-.dropdown:hover .dropdown-content {
+    z-index: 10;
+    text-align: center;
+    left: 50% ;
+    right: auto ;
+    padding-right: -10px;
+    transform: translate(-50%, 0) 
+  
+  }
+  
+  .dropdown-content a {
+  
+  
+    
+    text-decoration: none;
+    color: black;
     display: block;
-}
+    margin-top: 15px;
+    padding: 10px 0 5px 0;
+    
+    font-weight: bold;
+  
+  }
+  
+  .dropdown-content a:hover {
+    color: #007bff;
+  }
+  
+    .dropbtn {
+      font-weight: bold;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      transition: 0.3s;
+      border:none;
+      background: none;
+      margin-bottom: -10px;
+  }
+  
+  .dropbtn:hover {
+    color: #007bff;
+    
+  }
+  
+  .dropdown:hover .dropdown-content{
+    color: #007bff;
+    
+    display: block;
+  }
+  
+/*----------------------------------------------------------*/
 .container{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
-}
-
-.container {
+    position: relative;
+    top: 50%;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 400px;
     width: 900px;
     font-size: 0;
-    padding-top:10%;
-
+    
+    flex: auto;
+   
 }
+
 
 .menuicon {
     width:200px;
-    display: inline-block;
+    height: 230px;
     position:relative;
+    padding: auto;
+    justify-items: center;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    
 }
 .menuicon img{
     max-height: 200px; /* Adjust this value as needed to match the other images */
     max-width: auto;
     display: block; /* This ensures the image is a block-level element */
-    margin: 0 auto; /* This will center the image in its container */
+ /* This will center the image in its container */
+    transition: .5s ease;
+    bottom: 10px;
+    position: relative;
+    
+
 }
 .menuicon p{
-    position:absolute;
-    bottom:14px;
     font-size: 1rem;
     width: 200px;
     text-align: center;
+    position: absolute;
+    bottom: 0;
     
+}
+
+.menuicon img:hover{
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transition: 0.3 ease-in-out;
+    cursor: pointer;
+            
+}
+
+.menuicon img#notready:hover{
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(1.2);
+    transition: 0.3 ease-in-out;
+    cursor:wait;
+        
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        height: auto;
+        width: 100%; 
+    }
+
+    .menuicon {
+        width: 100%;
+        height: auto; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+        margin-bottom: 20px;
+    }
+
+    .menuicon img {
+        max-width: 90%; /* Adjust the image size */
+        height: auto; /* Keep image aspect ratio */
+    }
+
+    .menuicon p {
+        position: relative; /* Adjust positioning */
+        bottom: auto; /* Reset bottom positioning */
+    }
 }
