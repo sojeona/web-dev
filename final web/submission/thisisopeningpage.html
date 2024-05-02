@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>now i'm sojing</title>
+    <meta http-equiv="content-type" charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP&family=Passion+One:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="maincontainer menu" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); opacity: 0;">
+        <div class="button">
+            <ul>
+                <li><a href="#">Private</a>
+                    <ul>
+                        <li><a href="shoppingfinal.html">Shopping</a></li>
+                        <li><a href="/Users/ksj1317/Desktop/web-dev/final web/submission/midterm web/gallery.html">Gallery</a></li>
+                    </ul>
+                </li>
+                <li>SEE</li>
+                <li><a href="#">Work</a>
+                    <ul>
+                        <li><a href="#">aboutMe</a></li>
+                        <li><a href="#">CV</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <img src="Untitled_Artwork 3.gif" id="pp" />
+    <p>This is sojeong's webpage</p>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+
+    <script type="text/javascript">
+        const people = document.getElementById("pp");
+        const menu = document.querySelector(".menu");
+
+        gsap.fromTo(people, { x: window.innerWidth }, { x: -window.innerWidth , opacity: 1, duration: 7, onComplete: revealMenu });
+
+        function revealMenu() {
+            menu.style.display = "block"; // Show the menu
+            gsap.to(menu, { opacity: 1, duration: 0 }); // Instantly make the menu fully visible
+            gsap.to(menu, { top: "50%", left: "50%", translateX: "-50%", translateY: "-50%", duration: 0 }); // Position the menu at the center
+            gsap.to(".main", { opacity: 0, duration: 1, onComplete: hideMain }); // Fade out the main container
+        }
+
+        function hideMain() {
+            document.querySelector(".main").style.display = "none"; // Hide the main container
+        }
+    </script>
+</body>
+</html>
