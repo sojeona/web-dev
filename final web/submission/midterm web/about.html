@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sojeong Kim's Page</title>
+        <link rel="stylesheet" href="/Users/ksj1317/Desktop/web-dev/midterm web/about.css"/>
+        <style>
+            h3 {
+                text-align: center;
+                font-size: 50px;
+
+                
+            }
+          
+
+        </style>
+        <script type="text/javascript">
+           
+            var images = ["IMG_2996.HEIC", "IMG_3718.heic", "IMG_3718.heic"];
+                
+                function changeImage() {
+            var imgElement = document.getElementById('changeableImage');
+            var randomIndex = Math.floor(Math.random() * images.length);
+            imgElement.src = images[randomIndex];
+        }
+
+        window.onload = changeImage;
+        </script>
+    </head>
+    <body>
+        <nav>
+        
+            <div class="left-side">
+                <a href="/Users/ksj1317/Desktop/web-dev/midterm web/blogmain.html"><img src='/Users/ksj1317/Desktop/web-dev/midterm web/logo.png'></a>
+                <div class="line"></div> 
+            </div>
+            <div class="right-side">
+
+                <div class="dropdown">
+                    <button class="dropbtn">private</button>
+                    <div class="dropdown-content">
+                        <a href="#">Gallery</a>
+                        <a href="#">Blog</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">work</button>
+                    <div class="dropdown-content">
+                        <a href="#">Portfolio</a>
+                    </div>
+                
+                </div>
+            </div>
+        </nav>
+        <div class="aboutmain">
+            <!-- <img id="changeableImage" src="" alt="Random Image"/> -->
+            <img src="/Users/ksj1317/Desktop/web-dev/midterm web/IMG_2921.heic" alt="image"/>
+            
+           
+            <h1>Sojeong Kim</h1>
+        </div>
+        <h3>about</h3>
+        <div class="container">
+            <div class="textbox">
+                <h2>hello</h2>
+                <p>fdgafwedsfscfscfzscfedscdfahjdksnfhknfhakdnfjbhaewiksmdnfbheawjksnmdbfhmeauwjksnmbdxeghwuijfnhjefiauefheo;fidjfskdfajhdsbfjhdbfabeiufkjskdjfbksjdbfalkjeubfisjdfbksdjfbaklejisubfkhjdkfbajebskfndm</p>
+
+            </div>
+            <div class="textbox">
+                <h2>hello</h2>
+                <p>fdgafwedsfscfscfzscfedscfnhjefiauefheo;fidjfskdfajhdsbfjhdbfabeiufkjskdjfbksjdbfalkjeubfisjdfbksdjfbaklejisubfkhjdkfbajebskfndm</p>
+
+            </div>
+            <div class="textbox">
+                <h2>hello</h2>
+                <p>fdgafwedsfscfscfzscfedscfnhjefiauefheo;fidjfskdfajhdsbfjhdbfabeiufkjskdjfbksjdbfalkjeubfisjdfbksdjfbaklejisubfkhjdkfbajebskfndm</p>
+
+            </div>
+        </div>
+        
+    </body>
+</html>
