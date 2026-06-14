@@ -1,0 +1,12 @@
+# Claude Code internal tooling
+.claude/
+
+# macOS
+.DS_Store
+
+# Python artifacts (for IMEN427 project files)
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.ipynb_checkpoints/
